@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>在线购物系统</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>商品展示</h1>
+        </header>
+        
+        <div class="product">
+            <h2 id="product-name">商品名称</h2>
+            <img id="product-image" src="product.jpg" alt="商品图片">
+            <p id="product-description">商品描述</p>
+            <p id="product-price">价格: <span>¥100</span></p>
+            <button id="buy-button">购买</button>
+            <p id="frozen-message" class="hidden">商品已冻结，无法购买</p> <!-- 冻结信息 -->
+        </div>
+
+        <div id="purchase-form" class="hidden">
+            <h2>填写用户信息</h2>
+            <form>
+                <label for="user-name">姓名:</label>
+                <input type="text" id="user-name" required>
+                
+                <label for="user-phone">电话:</label>
+                <input type="tel" id="user-phone" required>
+                
+                <button type="submit">确认购买</button>
+                <button type="button" id="cancel-button">取消</button>
+            </form>
+        </div>
+        
+        <div id="notification" class="hidden">
+            <p id="notification-message"></p>
+        </div>
+    </div>
+    
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

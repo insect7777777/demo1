@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="seller.css">
+    <title>卖家后台</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>卖家后台控制</h1>
+        </header>
+
+        <div id="login-form">
+            <h2>登录</h2>
+            <form id="seller-login">
+                <label for="username">用户名:</label>
+                <input type="text" id="username" required>
+                <label for="password">密码:</label>
+                <input type="password" id="password" required>
+                <button type="submit">登录</button>
+            </form>
+        </div>
+
+        <div id="dashboard" class="hidden">
+            <h2>控制面板</h2>
+            <button id="add-product-button">发布商品</button>
+            <button id="view-history-button">查看历史商品</button>
+            <button id="view-purchasers-button">查看购买人信息</button>
+            <button id="freeze-product-button">冻结商品</button>
+            <button id="change-password-button">修改密码</button>
+            
+            <div id="product-form" class="hidden module">
+                <h3>发布商品</h3>
+                <form id="product-info-form" enctype="multipart/form-data">
+                    <label for="product-name">商品名称:</label>
+                    <input type="text" id="product-name" required>
+                    <label for="product-description">商品描述:</label>
+                    <input type="text" id="product-description" required>
+                    <label for="product-image">商品图片:</label>
+                    <input type="file" id="product-image" accept="image/*" required>
+                    <label for="product-price">商品价格:</label>
+                    <input type="number" id="product-price" required>
+                    <button type="submit">提交商品</button>
+                </form>
+            </div>
+
+            <div id="current-product" class="hidden module">
+                <h3>当前商品信息</h3>
+                <p id="current-name"></p>
+                <p id="current-description"></p>
+                <img id="current-image" src="" alt="商品图片" style="max-width: 100%;">
+                <p id="current-price"></p>
+                <button id="remove-product-button">下架商品</button>
+            </div>
+
+            <div id="history" class="hidden module">
+                <h3>历史商品</h3>
+                <ul id="history-list"></ul>
+            </div>
+
+            <div id="purchasers" class="hidden module">
+                <h3>购买人信息</h3>
+                <ul id="purchaser-list"></ul>
+            </div>
+
+            <div id="change-password-form" class="hidden module">
+                <h3>修改密码</h3>
+                <form id="password-form">
+                    <label for="old-password">旧密码:</label>
+                    <input type="password" id="old-password" required>
+                    <label for="new-password">新密码:</label>
+                    <input type="password" id="new-password" required>
+                    <button type="submit">修改密码</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="seller.js"></script>
+</body>
+</html>
